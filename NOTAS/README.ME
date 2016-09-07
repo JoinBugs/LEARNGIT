@@ -1,2 +1,80 @@
 EN ESTE DIRECTORIO SUBIRAN LAS NOTAS QUE CREAN QUE LES PUEDAN, SER DE AYUDA, 
 ESTAS NOTAS LAS PODRAN VER TODAS LAS PERSONAS UNIDAS AL CURSO
+
+##Glosario
+
+*git init -> crea o reinicializa un repositorio.
+
+*git status -> muestra el estado de los archivos del repositorio asi
+               como tambien la rama donde nos encontramos.
+
+*git add -> agregar archivos al escenario(stage) se puede usar "git ." cuando
+            se quieran agregar todos los archivos que se encuentren en estado modified.
+
+*git commit -m -> confirma los cambios en los respectivos archivos y los agrega en 
+                  el tope de HEAD, la opcion -m es para dejar un comentario entre
+                  comillas este es necesario de no proporcionar la opcion aparecera en
+                  consola para que dejes el comentario respecto a tus cambios.
+
+*git rm -> elimina un archivo y de paso tambien lo agrega a stage, facilitandonos
+           este proceso, igual sirve tambien para renombrar archivos de igual forma 
+           los agrega al stage.
+
+*git mv -> mueve archivos y de paso los agrega al stage.
+
+*git log -> muestra el archivos con el registro de las diferentes confirmaciones que
+            se han echo en el repositorio asi como tambien su fecha y tu token id ssh
+            y la descripcion de la respectiva confirmacion, puede pasarse parametros
+            como numeros para asi filtrar un determinado numero de entradas
+            eje: git log -5 lista los ultimos 5 commits
+
+*git reflog -> muestra el registro del archivo reflog que almacena cada operacion
+               sobre el repositorio, cada confirmacion, si se hizo un merge, o alguna 
+               operacion relacionada al repositorio, este comando es util para ver
+               los primeros 7 caracteres de la cadena ssh respectiva a cada opereracion
+               con la breve descripcion de lo que se hizo al lado.
+
+*git branch -> gestiona una rama en un repositorio, una rama es una bifurcacion del
+               repositorio o el proyecto, generalmente se suele crear una nueva rama
+               cuando se requiere agregar una nueva funcionalidad o caracteristica
+               al proyecto y esta es independiente al flujo de trabajo actual y este 
+               requiere no ser interrupido, cuando se termina de agregar una 
+               determinada funcionalidad al proyecto se tiene que unir la rama que 
+               contiene dicha nueva funcionalidad con la rama maestro o a actual,
+               y se tiene que eliminar la rama que contenia la respectiva funcionalidad, todo
+               esto como buenas practicas.
+
+*git branch rama -> crea una nueva rama con los archivos actuales, llamada rama
+
+*git branch -d -> elimina una rama que ya ha sido previamente unida.
+
+*git branch -D -> elimina una rama aun que esta no haya sido unida.
+
+*git branch -> muestra las ramas locales.
+
+*git branch -a -> muestra las ramas locales y remotas
+
+*git branch -v -> muestra las ramas locales con los primeros 7 caracteres de la cadena ssh y la 
+                  descripcion del ultimo commit de cada rama.
+
+
+*git merge rama-feature-> une ramas, une la rama-feature con la rama donde nos encontramos
+                          actualmente.
+
+*git clone url -> copia un repositorio, este repositorio puede ser local o remoto
+
+*git remote -> gestiona repositorios remotos, es decir repositorios en un servidor externo al nuestro,
+               generalmente en internet, como en github
+
+*git remote set-url pseudonimo url -> establece o cambia la ruta remota para ese repositorio, en donde
+	                                  la url es la ruta donde se encuentra nuestro repositorio remoto y el
+	                                  pseudonimo es una palabra clave se se asocia con la ruta o url. generalmente
+	                                  y como buena practica se nombra al pseudonimo 'origin'.
+
+*git remote add pseudonimo url -> agrega una nueva ruta para ese repositorio
+
+
+*git push pseudonimo rama -> sincroniza o sube las confirmaciones locales con el repositorio remoto.
+
+
+*git pull pseudonimo rama -> trate los los mas recientes cambios del repositorio remoto al repositorio local.
